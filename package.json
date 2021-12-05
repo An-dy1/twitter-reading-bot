@@ -4,7 +4,8 @@
   "description": "my twitter bot to post the articles I read",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "npm run test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
