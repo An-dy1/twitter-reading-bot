@@ -1,0 +1,24 @@
+{
+  "name": "reading-bot",
+  "version": "1.0.0",
+  "description": "my twitter bot to post the articles I read",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/An-dy1/twitter-reading-bot.git"
+  },
+  "author": "Andie Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/An-dy1/twitter-reading-bot/issues"
+  },
+  "homepage": "https://github.com/An-dy1/twitter-reading-bot#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "twitter-api-client": "^1.4.0"
+  }
+}
