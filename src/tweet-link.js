@@ -11,11 +11,18 @@ const twitterClient = new TwitterClient({
   accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-// todo: organize this into a runProgram() function that gets called somewhere else
-
 function tweetLink() {
   let tweet;
-  tweet = input.question('What link would you like to tweet? ');
+  link = input.question('What link would you like to tweet? ');
+  additionalText = input.question(
+    'Enter additional tweet text. If nothing to add, press ENTER '
+  );
+
+  if (additionalText) {
+    tweet = `${additionalText} ${link}`;
+  } else {
+    tweet = link;
+  }
 
   twitterClient.tweets
     .statusesUpdate({
@@ -29,9 +36,7 @@ function tweetLink() {
     });
 }
 
-module.exports = {
-  tweetLink: tweetLink,
-};
+module.exports = tweetLink;
 
 // axios
 //   .get('http://history.muffinlabs.com/date')
