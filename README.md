@@ -1,3 +1,7 @@
+# To run program:
+
+`npm start`
+
 # Todo: improvements
 
 - do Python version of this script, for practice
