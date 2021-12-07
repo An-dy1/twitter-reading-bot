@@ -1,5 +1,5 @@
 const input = require('readline-sync');
-const tweetLink = require('./src/tweet-link');
+const tweetLink = require('./scripts/tweet-link');
 
 validChoices = ['a', 'b'];
 
