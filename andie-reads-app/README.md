@@ -26,7 +26,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+---
+
 # My notes:
+
+To run (from master):
+`npm start`
+A link is required but additional text is not.
 
 Last error compiling angular code:
 `Error: src/app/app.component.ts:2:18 - error TS2591: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.`
