@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`
 
 ## Build
 
@@ -29,10 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ---
 
 # My notes:
-
-To run (from master):
-`npm start`
-A link is required but additional text is not.
 
 Last error compiling angular code:
 `Error: src/app/app.component.ts:2:18 - error TS2591: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.`

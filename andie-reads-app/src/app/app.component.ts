@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+require('dotenv').config({});
 const validUrl = require('valid-url');
 
 @Component({
@@ -21,6 +22,6 @@ export class AppComponent {
 
   handleTweetButtonClick() {
     console.log(this.tweetlink);
-    console.log(`valid link is: ${this.isValidTweetLink(this.tweetlink)}`);
+    console.log(`valid link? ${this.isValidTweetLink(this.tweetlink)}`);
   }
 }
