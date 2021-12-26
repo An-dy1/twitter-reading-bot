@@ -3,6 +3,10 @@ const tweetLink = require('./src/tweet-link');
 
 validChoices = ['a', 'b'];
 
+let xhr = new XMLHttpRequest();
+let exec = require('child_process').exec;
+let command = 'echo `Hello, World`';
+
 askForTypeOfTask = () => {
   userChoice = input.question(
     `What would you like to do? \n Type A for tweet a link \n Type B for something else \n`
