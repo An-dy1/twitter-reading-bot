@@ -10,3 +10,9 @@
 
 To run: `curl -s "http://artscene.textfiles.com/vt100/xmas-02.vt" | pv -q -L 3600`
 To do: learn more about bash scripts
+
+#### Resources for making curl request in node app:
+
+[curl request node wrapper](https://github.com/node-js-libs/curlrequest)
+[node extension for making http calls](https://github.com/dhruvbird/http-sync)
+[on shell scripting](https://www.shellscript.sh/first.html)
