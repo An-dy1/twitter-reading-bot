@@ -3,12 +3,6 @@ const tweetLink = require('./src/tweet-link');
 
 validChoices = ['a', 'b'];
 
-// let xhr = new XMLHttpRequest();
-let exec = require('child_process').exec;
-let command = 'echo Hello World';
-let asciiArt =
-  'curl -s "http://artscene.textfiles.com/vt100/xmas-02.vt" | pv -q -L 3600';
-
 askForTypeOfTask = () => {
   userChoice = input.question(
     `What would you like to do? \n Type A for tweet a link \n Type B for something else \n`
@@ -44,8 +38,14 @@ runProgram = () => {
   }
 };
 
+runProgram();
+
 // note: this is not being called anywhere in this program at the moment
-// see readme for
+// see readme for more
+// let xhr = new XMLHttpRequest();
+let exec = require('child_process').exec;
+let asciiArt =
+  'curl -s "http://artscene.textfiles.com/vt100/xmas-02.vt" | pv -q -L 3600';
 makeAsciiArt = () => {
   child = exec(asciiArt, function (error, stdout, stderr) {
     console.log('stdout: ' + stdout);
@@ -56,5 +56,3 @@ makeAsciiArt = () => {
     }
   });
 };
-
-runProgram();

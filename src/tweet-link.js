@@ -38,6 +38,8 @@ function tweetLink() {
 
 module.exports = tweetLink;
 
+// unused code that will retrieve an event in history on this day using an api
+
 // axios
 //   .get('http://history.muffinlabs.com/date')
 //   .then((response) => {
@@ -45,7 +47,7 @@ module.exports = tweetLink;
 //     let tweet;
 //     if (data.Events && data.Events.length) {
 //       // tweet the first event in the array
-//       tweet = `Year ${data.Events[2].year}: ${data.Events[2].text}`;
+//       tweet = `Year ${data.Events[0].year}: ${data.Events[0].text}`;
 //     } else {
 //       tweet = `Boring day, I guess`;
 //     }
