@@ -1,5 +1,6 @@
 const input = require('readline-sync');
 const tweetLink = require('./src/tweet-link');
+const deleteTweet = require('./src/delete-tweet');
 
 validChoices = ['a', 'b'];
 
@@ -35,6 +36,7 @@ runProgram = () => {
     tweetLink();
   } else {
     console.log(`picked something else`);
+    seeTweets();
   }
 };
 
