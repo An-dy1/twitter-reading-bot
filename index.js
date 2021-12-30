@@ -36,7 +36,7 @@ runProgram = () => {
     tweetLink();
   } else {
     console.log(`picked something else`);
-    seeTweets();
+    deleteTweet(1234);
   }
 };
 

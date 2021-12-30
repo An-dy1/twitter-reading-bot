@@ -7,28 +7,17 @@ const twitterClient = new TwitterClient({
   accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-deleteTweet = (id) => {
+// note: I thought this endpoint would return my tweets, but in fact returns all public tweets matching the parameters passed
+
+searchForTweet = (param) => {
   twitterClient.tweets
-    .statusesDestroyById(id)
+    .search(param)
     .then((response) => {
       console.log(`Successfully deleted: ${response.text}`);
     })
     .catch((err) => {
       console.error(err);
     });
-
-  //   twitterClient.tweets
-  //     .statusesUpdate({
-  //       status: tweet,
-  //     })
-  //     .then((response) => {
-  //       console.log(`Successfully tweeted - ${response.text}`);
-  //       // todo: stopped here
-  //       console.log(`id: ${response.id}`);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
 };
 
-module.exports = deleteTweet;
+module.exports = searchForTweet;
