@@ -31,7 +31,7 @@ function tweetLink() {
     .then((response) => {
       console.log(`Successfully tweeted - ${response.text}`);
       // todo: stopped here
-      console.log(`id: ${response.id}`);
+      console.log(`id: ${response.id} \ncreated at: ${response.created_at}`);
     })
     .catch((err) => {
       console.error(err);
