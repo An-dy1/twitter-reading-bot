@@ -6,7 +6,7 @@ validChoices = ['a', 'b'];
 
 askForTypeOfTask = () => {
   userChoice = input.question(
-    `What would you like to do? \n Type A for tweet a link \n Type B for something else \n`
+    `What would you like to do? \n Type A for tweet a link \n Type B to delete a tweet \n`
   );
   return userChoice;
 };
@@ -35,8 +35,7 @@ runProgram = () => {
   if (userChoice === 'a') {
     tweetLink();
   } else {
-    console.log(`picked something else`);
-    deleteTweet(1234);
+    deleteTweet();
   }
 };
 
