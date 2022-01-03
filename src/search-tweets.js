@@ -13,7 +13,7 @@ searchForTweet = (param) => {
   twitterClient.tweets
     .search(param)
     .then((response) => {
-      console.log(`Successfully deleted: ${response.text}`);
+      console.log(`Successfully searched for: ${response.data}`);
     })
     .catch((err) => {
       console.error(err);

@@ -8,21 +8,24 @@ const twitterClient = new TwitterClient({
   accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-deleteTweet = () => {
-  let deleteId = input.question(
-    `What is the id of the tweet you would like to delete? `
-  );
+// cannot for the life of me make this request return anything other than an empty object
+// have tried:
+// 1. id as a number and as a string
+// 2. id as an array of strings and one single string
+// 3. passing as a parameter and passing directly in this request
 
+function lookUpTweetById() {
   twitterClient.tweets
-    .statusesDestroyById({
-      id: deleteId,
+    .statusesLookup({
+      id: `20`,
+      id: `1050118621198921728`,
     })
     .then((response) => {
-      console.log(`Successfully deleted: ${response.text}`);
+      console.log(`Looked up tweet: ${response.data}`);
     })
     .catch((err) => {
       console.error(err);
     });
-};
+}
 
-module.exports = deleteTweet;
+module.exports = lookUpTweetById;

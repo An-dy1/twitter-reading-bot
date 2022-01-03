@@ -1,6 +1,7 @@
 const input = require('readline-sync');
 const tweetLink = require('./src/tweet-link');
 const deleteTweet = require('./src/delete-tweet');
+const lookUpTweet = require('./src/tweet-lookup');
 
 validChoices = ['a', 'b'];
 
