@@ -2,6 +2,7 @@ const input = require('readline-sync');
 const tweetLink = require('./src/tweet-link');
 const deleteTweet = require('./src/delete-tweet');
 const lookUpTweet = require('./src/tweet-lookup');
+const getRecentTimelineTweets = require('./src/getRecentTimelineTweets');
 
 validChoices = ['a', 'b'];
 
@@ -36,7 +37,9 @@ runProgram = () => {
   if (userChoice === 'a') {
     tweetLink();
   } else {
-    deleteTweet();
+    // deleteTweet();
+    // lookUpTweet();
+    getRecentTimelineTweets();
   }
 };
 
@@ -46,6 +49,7 @@ runProgram();
 // see readme for more
 // let xhr = new XMLHttpRequest();
 let exec = require('child_process').exec;
+const getRecentTweetsByUser = require('./src/getRecentTimelineTweets');
 let asciiArt =
   'curl -s "http://artscene.textfiles.com/vt100/xmas-02.vt" | pv -q -L 3600';
 makeAsciiArt = () => {

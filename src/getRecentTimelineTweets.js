@@ -8,23 +8,19 @@ const twitterClient = new TwitterClient({
   accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-// cannot for the life of me make this request return anything other than an empty object
-// have tried:
-// 1. id as a number and as a string
-// 2. id as an array of strings and one single string
-// 3. passing as a parameter and passing directly in this request
-
-function lookUpTweetById() {
+function getRecentTweetsByUser() {
   twitterClient.tweets
-    .statusesLookup({
-      id: `1478087417596887047`,
+    .statusesUserTimeline({
+      //   screen_name: 'andireadswhat',
     })
     .then((response) => {
-      console.log(`Looked up tweet: ${response.data}`);
+      for (let i = 0; i < response.length; i++) {
+        console.log(`Recent tweets: ${response.urls}, ${response.id_str}`);
+      }
     })
     .catch((err) => {
       console.error(err);
     });
 }
 
-module.exports = lookUpTweetById;
+module.exports = getRecentTweetsByUser;
