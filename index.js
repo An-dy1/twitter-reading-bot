@@ -1,11 +1,13 @@
 const input = require('readline-sync');
 const tweetLink = require('./src/tweet-link');
+const deleteTweet = require('./src/delete-tweet');
+const lookUpTweet = require('./src/tweet-lookup');
 
 validChoices = ['a', 'b'];
 
 askForTypeOfTask = () => {
   userChoice = input.question(
-    `What would you like to do? \n Type A for tweet a link \n Type B for something else \n`
+    `What would you like to do? \n Type A for tweet a link \n Type B to delete a tweet \n`
   );
   return userChoice;
 };
@@ -34,7 +36,7 @@ runProgram = () => {
   if (userChoice === 'a') {
     tweetLink();
   } else {
-    console.log(`picked something else`);
+    deleteTweet();
   }
 };
 
