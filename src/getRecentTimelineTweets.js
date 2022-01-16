@@ -14,6 +14,7 @@ function getRecentTweetsByUser() {
       //   screen_name: 'andireadswhat',
     })
     .then((response) => {
+      // these are all printing out undefined :/
       for (let i = 0; i < response.length; i++) {
         console.log(`Recent tweets: ${response.urls}, ${response.id_str}`);
       }
