@@ -3,12 +3,13 @@ const tweetLink = require('./src/tweet-link');
 const deleteTweet = require('./src/delete-tweet');
 const lookUpTweet = require('./src/tweet-lookup');
 const getRecentTimelineTweets = require('./src/getRecentTimelineTweets');
+const usersLookup = require('./src/users-lookup')
 
-validChoices = ['a', 'b'];
+validChoices = ['a', 'b', 'c'];
 
 askForTypeOfTask = () => {
   userChoice = input.question(
-    `What would you like to do? \n Type A for tweet a link \n Type B to delete a tweet \n`
+    `What would you like to do? \n Type A for tweet a link \n Type B to look up your recent tweets \n Type C to look up your user \n`
   );
   return userChoice;
 };
@@ -36,10 +37,12 @@ runProgram = () => {
 
   if (userChoice === 'a') {
     tweetLink();
-  } else {
+  } else if(userChoice === 'b'){
     // deleteTweet();
     // lookUpTweet();
     getRecentTimelineTweets();
+  } else if(userChoice === 'c') {
+    usersLookup();
   }
 };
 

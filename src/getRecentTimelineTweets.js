@@ -9,14 +9,15 @@ const twitterClient = new TwitterClient({
 });
 
 function getRecentTweetsByUser() {
+
   twitterClient.tweets
     .statusesUserTimeline({
-      //   screen_name: 'andireadswhat',
+        screen_name: 'andireadswhat',
     })
     .then((response) => {
       // these are all printing out undefined :/
       for (let i = 0; i < response.length; i++) {
-        console.log(`Recent tweets: ${response.urls}, ${response.id_str}`);
+        console.log(`Recent tweets: ${response[i].id} ${response[i].text}`);
       }
     })
     .catch((err) => {
